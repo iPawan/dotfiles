@@ -1,3 +1,5 @@
+call plug#begin('~/.vim/plugged')
+
 Plug 'chriskempson/base16-vim'
 Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
@@ -6,4 +8,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
+Plug 'tpope/vim-surround'
+Plug 'Yggdroot/indentLine'
 
+call plug#end()

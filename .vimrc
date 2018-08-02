@@ -10,14 +10,17 @@ filetype plugin on
 filetype plugin indent on
 
 " Plugin management
-call plug#begin('~/.vim/plugged')
  
 if filereadable(expand("~/.vimrc.bundle"))
   source ~/.vimrc.bundle
 endif
-call plug#end()
 " delay fix:  Stop lag for Shit+O
 set timeoutlen=5000 ttimeoutlen=100
+
+set nobackup
+set nowritebackup
+set noswapfile
+set showcmd
 
 " FINDING FILES
 " Search down in sub-directories
@@ -49,6 +52,7 @@ let g:gruvbox_contrast_dark = "hard"
 
 " Set my Leader key
 let mapleader = "\<Space>"
+nnoremap <leader>r :so ~/.vimrc<CR>
 " Set my split preference
 set splitbelow
 set splitright
@@ -57,3 +61,13 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <Leader>o :only<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap h <nop>
+nnoremap l <nop> 
+
+" Indent line settings
+let g:indentLine_color_term = 239
+let g:indentLine_char = '|'
+set expandtab
+set tabstop=2
+set shiftwidth=2
