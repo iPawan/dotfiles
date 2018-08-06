@@ -1,15 +1,11 @@
-export ZSH="/Users/pawan/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
-
-plugins=(
-  git
-  zsh-completions
-  vi-mode
-)
-
+setopt MENU_COMPLETE
 autoload -U compinit && compinit
-source $ZSH/oh-my-zsh.sh
+autoload -U promptinit; promptinit
+prompt pure
+
+# Enable Syntax highlighting at the prompt
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export EDITOR='vim'
 
@@ -25,3 +21,5 @@ export FZF_DEFAULT_COMMAND="fd --type f"
 # NVIM related settings
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
