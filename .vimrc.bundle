@@ -22,4 +22,10 @@ Plug 'prettier/vim-prettier', {
     \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
 Plug 'tpope/vim-fugitive'
 
+"vue
+Plug 'posva/vim-vue'
+
+" trying some plugins
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-sensible'
 call plug#end()

@@ -1,5 +1,6 @@
 " Basic setup for vim 
 " -- Pawan 07/28/2018
+"
 " No compatiblity with classic vi
 
 set nocompatible
@@ -21,6 +22,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 set showcmd
+set relativenumber
 
 " FINDING FILES
 " Search down in sub-directories
@@ -79,13 +81,6 @@ let NERDTreeQuitOnOpen = 1
 "" Show hidden files alwasys
 let NERDTreeShowHidden=1
 
-" Emmet related settings
-let g:user_emmet_leader_key='<Tab>'
-let g:user_emmet_settings = {
-  \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
-    \  },
-  \}
 
 " ALE settings
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
@@ -100,3 +95,19 @@ let g:ale_javascript_prettier_use_local_config = 1
 
 "autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 
+" auto load the changed file
+set autoread
+set autowrite
+
+" switch between the last two files
+nnoremap <leader><leader> <c-^>
+nnoremap <leader>s :w<CR>
+nnoremap <leader>; :
+
+set winwidth=84
+" We have to have a winheight bigger than we want to set winminheight. But if
+" we set winheight to be huge before winminheight, the winminheight set will
+" fail.
+set winheight=5
+set winminheight=5
+set winheight=999
