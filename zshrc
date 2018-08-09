@@ -18,6 +18,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 export FZF_DEFAULT_OPS="--extended"
 export FZF_DEFAULT_COMMAND="fd --type f"
 
+# Aliases
+function take() { mkdir -p $1 && cd $1  }
+
 # NVIM related settings
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
