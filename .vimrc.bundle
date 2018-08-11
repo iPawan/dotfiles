@@ -7,6 +7,8 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
+Plug 'herrbischoff/cobalt2.vim'
+Plug 'flazz/vim-colorschemes'
 "Plug 'pangloss/vim-javascript'
 "Plug 'mxw/vim-jsx'
 "Plug 'prettier/vim-prettier', {

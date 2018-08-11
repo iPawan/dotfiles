@@ -47,6 +47,7 @@ set winminheight=5
 set winheight=999
 
 set backspace=indent,eol,start
+set t_Co=256
 " enable sytanx, indentation and plugins
 syntax enable
 filetype plugin on
@@ -65,16 +66,15 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
 
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
 
+"colorscheme gruvbox
+"let g:gruvbox_contrast_dark = "hard"
 
 " Base 16 color stuff
 "if filereadable(expand("~/.vimrc_background"))
 "  let base16colorspace=256
 "  source ~/.vimrc_background
 "endif
-
 " Set my Leader key
 let mapleader = "\<Space>"
 nnoremap <leader>r :so ~/.vimrc<CR>
@@ -86,8 +86,8 @@ nnoremap <Leader>o :only<CR>
 nnoremap <C-p> :Files<CR>
 
 " Indent line settings
-let g:indentLine_color_term = 239
-let g:indentLine_char = '|'
+"let g:indentLine_color_term = 239
+"let g:indentLine_char = '|'
 
 " switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -102,3 +102,11 @@ imap <c-c> <esc>
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 set laststatus=2
 set showtabline=2
+
+" Strong secret for secret files
+set cm=blowfish2
+
+
+" Auto Commands for templates
+au bufnewfile *.sh 0r ~/.vim/templates/sh_header.tmp
+
