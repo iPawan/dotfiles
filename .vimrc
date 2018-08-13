@@ -2,7 +2,6 @@
 " -- Pawan 07/28/2018
 "
 " No compatiblity with classic vi
-
 set nocompatible
 set timeoutlen=5000 ttimeoutlen=100
 set nobackup
@@ -112,3 +111,4 @@ au bufnewfile *.sh 0r ~/.vim/templates/sh_header.tmp
 
 " clear ruby comments
 nnoremap <leader>cc :%s/\_s*#.*//g<cr>
+nnoremap <leader>q :q<cr>
