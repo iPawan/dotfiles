@@ -97,7 +97,7 @@ nnoremap <leader>; :
 
 " Can't be bothered to understand ESC vs <c-c> in insert mode
 imap <c-c> <esc>
-
+inoremap jj <esc>
 "status line
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 set laststatus=2
@@ -110,3 +110,5 @@ set cm=blowfish2
 " Auto Commands for templates
 au bufnewfile *.sh 0r ~/.vim/templates/sh_header.tmp
 
+" clear ruby comments
+nnoremap <leader>cc :%s/\_s*#.*//g<cr>

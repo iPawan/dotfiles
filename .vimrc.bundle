@@ -9,6 +9,7 @@ Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'herrbischoff/cobalt2.vim'
 Plug 'flazz/vim-colorschemes'
+Plug 'wojtekmach/vim-rename'
 "Plug 'pangloss/vim-javascript'
 "Plug 'mxw/vim-jsx'
 "Plug 'prettier/vim-prettier', {
